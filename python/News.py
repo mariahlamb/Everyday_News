@@ -6,7 +6,7 @@ from datetime import *
 
 # 每日简报
 def news(TX_KEY):
-    req_url = 'http://api.tianapi.com/networkhot/index?key=' + TX_KEY
+    req_url = 'https://apis.tianapi.com/internet/index?key=' + TX_KEY
     response = requests.get(req_url)
     loads = json.loads(response.text)
     news_list = loads.get('newslist')
@@ -23,7 +23,7 @@ def news(TX_KEY):
 
 # 名言
 def verse(TX_KEY):
-    req_url = 'http://api.tianapi.com/mingyan/index?key=' + TX_KEY
+    req_url = 'https://apis.tianapi.com/topnews/index?key=' + TX_KEY
     response = requests.get(req_url)
     loads = json.loads(response.text)
     verse_list = loads.get('newslist')
@@ -42,7 +42,7 @@ def todayYear():
 
 # 精美句子
 def sentence(TX_KEY):
-    req_url = 'http://api.tianapi.com/dujitang/index?key=' + TX_KEY
+    req_url = 'http://apis.tianapi.com/dujitang/index?key=' + TX_KEY
     response = requests.get(req_url)
     loads = json.loads(response.text)
     verse_list = loads.get('newslist')
